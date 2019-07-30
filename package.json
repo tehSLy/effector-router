@@ -4,15 +4,21 @@
   "description": "Roter, based on state-manager Effector",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc --p tsconfig.json -d"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/history": "^4.7.2",
+    "@types/react": "^16.8.23",
     "effector": "^20.1.1",
+    "effector-react": "^20.2.1",
     "history": "^4.9.0",
     "path-to-regexp": "^3.0.0",
+    "react": "^16.8.6",
     "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.3.3"
   }
 }
