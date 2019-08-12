@@ -1,6 +1,6 @@
 {
   "name": "effector-router",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Router, based on state-manager Effector",
   "main": "index.js",
   "scripts": {
