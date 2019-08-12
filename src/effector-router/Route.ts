@@ -14,8 +14,8 @@ type Watcher<T> = ( data: T ) => UnregisterCallback;
 export type Route<S> = {
 	watch( watcher: Watcher<Match> ): any;
 	readonly match: Store<Match>
-	readonly matcher: Matcher;
-	readonly normalizedPath: string;
+	readonly matcher: Matcher; // should be hidden
+	readonly normalizedPath: string; // should be hidden
 
 	path( param: string ): string;
 	path( ...params: string[] ): string;

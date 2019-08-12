@@ -68,9 +68,12 @@ Hook usage with `Route`
 ```
 
 ```js
-	const Component = () => {
-		const [match, params] = useRoute(paths.contacts)
-
-		//...
+const routes = createRoutes({
+	users: {
+		path: "",
+		nested: {},
+		component
 	}
+});
+
 ```

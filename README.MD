@@ -10,10 +10,25 @@ Feautures:
  + Parameters modifiers
  + Custom Parameters matching
  + Implicit router included
- + 
+
+Roadmap:
+ + 404
+ + SSR Tests
 
 
 ### API
+
+#### `Route`
+```js
+type Route = {
+	watch(): UnregisterCallback
+	path(...args: any[] | {}): string
+	match
+	matcher
+	normalizedPath
+	// + nested routes keys
+}
+```
 
 #### `createRouter(history?: History) => Router`
 This method creates router - root abstraction on routing. It provides API for history management, and reacting on history change events.
@@ -38,9 +53,11 @@ It's fully optional, to explicitly define router!
 	const routes = createRoutes({
 		about: "/about",
 		contacts: ["/contacts", { //refers to `/contacts`, non-exact (matches `/contacts/123`)
-			id: "/:id" //refers to `/contacts/:id`
+			id: "/:id" //refers to `/contacts/:id`,
+			add: "/add", //refers to `/contacts/add`
+			help: "/help" //refers to `/contacts/help`
 		}],
-		products: {//refers to `/products`, exact match (doesnt match `/products`)
+		products: {//refers to `/products`, exact match (doesnt match `/products/123`)
 			exact: true,
 			path: "/products",
 			nested: {

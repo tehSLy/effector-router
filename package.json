@@ -2,23 +2,24 @@
   "name": "effector-router",
   "version": "0.0.2",
   "description": "Router, based on state-manager Effector",
-  "main": "index.js",
   "scripts": {
     "build": "tsc --p tsconfig.json -d"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/history": "^4.7.2",
-    "@types/react": "^16.8.23",
-    "effector": "^20.1.1",
-    "effector-react": "^20.2.1",
-    "history": "^4.9.0",
-    "path-to-regexp": "^3.0.0",
-    "react": "^16.8.6",
-    "typescript": "^3.5.3"
+	  "effector": "^20.1.1",
+	  "effector-react": "^20.2.1",
+	  "history": "^4.9.0",
+	  "path-to-regexp": "^3.0.0",
+	  "react": "^16.8.6"
+	},
+	"devDependencies": {
+		"typescript": "^3.5.3",
+		"@babel/preset-typescript": "^7.3.3",
+		"@types/history": "^4.7.2",
+		"@types/react": "^16.8.23"
   },
-  "devDependencies": {
-    "@babel/preset-typescript": "^7.3.3"
-  }
+  "keywords": ["effector", "routing", "router", "route", "paths"],
+  "main": "./dist/effector-router/index.js"
 }
