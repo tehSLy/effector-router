@@ -1,7 +1,7 @@
 {
   "name": "effector-router",
   "version": "0.0.1",
-  "description": "Roter, based on state-manager Effector",
+  "description": "Router, based on state-manager Effector",
   "main": "index.js",
   "scripts": {
     "build": "tsc --p tsconfig.json -d"
