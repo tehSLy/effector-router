@@ -12,10 +12,10 @@ interface UnregisterCallback {
 type Watcher<T> = ( data: T ) => UnregisterCallback;
 
 export type Route<S> = {
-	watch( watcher: Watcher<Match> ): any;
+	// watch( watcher: Watcher<Match> ): any;
 	readonly match: Store<Match>
-	readonly matcher: Matcher; // should be hidden
-	readonly normalizedPath: string; // should be hidden
+	// readonly matcher: Matcher; // should be hidden
+	// readonly normalizedPath: string; // should be hidden
 
 	path( param: string ): string;
 	path( ...params: string[] ): string;
@@ -35,7 +35,6 @@ export function createRoute( params: any, $path: Store<string>, prefix = "" ): a
 	const compiler = pathToRegexp.compile( compilePath );
 	const keys: pathToRegexp.Key[] = [];
 	const matcher = createMatcher( matchPath, keys );
-	console.log( { keys, matchPath, compilePath } )
 	const $match = $path.map( matcher );
 
 	const compile = ( ...args: any ) => {
@@ -55,10 +54,10 @@ export function createRoute( params: any, $path: Store<string>, prefix = "" ): a
 	const result = {
 		...nestedRoutes,
 		path: compile,
-		watch: $match.watch,
 		match: $match,
-		matcher,
-		normalizedPath: matchPath
+		// watch: $match.watch,
+		// matcher,
+		// normalizedPath: matchPath //why we need this??
 	};
 
 	return result;

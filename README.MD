@@ -61,7 +61,7 @@ It's fully optional, to explicitly define router!
 			exact: true,
 			path: "/products",
 			nested: {
-				id: "/:id", //refers to `/products/help/:id`
+				id: "/:id", //refers to `/products/:id`
 				help: ["/help", { //refers to `/products/help`
 					section: "/:section" //refers to `/products/help/:section`
 				}]
@@ -71,10 +71,12 @@ It's fully optional, to explicitly define router!
 
 	const unwatchProducts = routes.products.watch(console.log);
 
-	router.pushPath(routes.products.help.path())
+	router.pushPath(routes.products.id.path(12))
+		 // => `/products/12`
 		 // => {matched: false, params: {}}
 		
 	router.pushPath(routes.products.path())
+		 // => `/products/`
 		 // => {matched: true, params: {}}
 	unwatchProducts();
 
