@@ -1,7 +1,10 @@
+export { useRoute, useSearch } from "../_effector-router-react";
+export { initRouting, RoutingConfig } from "./config";
 export { createMatcher } from "./createMatcher";
 export { createRouter } from "./createRouter";
 export { createRoutes } from "./createRoutes";
 export { Match } from "./Match";
 export { navigate } from "./navigate";
 export { Route } from "./Route";
-export {RoutingConfig, initRouting} from "./config";
+import * as __Router from "../_effector-router";
+export const UNSAFE__Router = __Router;

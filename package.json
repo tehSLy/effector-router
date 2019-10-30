@@ -3,22 +3,27 @@
   "version": "0.0.4",
   "description": "Router, based on state-manager Effector",
   "scripts": {
-    "build": "tsc --p tsconfig.json -d"
+    "build": "tsc --p tsconfig.json -d",
+    "watch": "tsc -watch --p tsconfig.json -d",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "effector": "^20.1.1",
-    "effector-react": "^20.2.1",
+    "effector-react": "^20.4.0",
     "history": "^4.9.0",
-    "path-to-regexp": "^3.0.0",
+    "path-to-regexp": "^3.1.0",
     "react": "^16.8.6"
   },
   "devDependencies": {
-    "typescript": "^3.5.3",
     "@babel/preset-typescript": "^7.3.3",
     "@types/history": "^4.7.2",
-    "@types/react": "^16.8.23"
+    "@types/jest": "^24.0.19",
+    "@types/react": "^16.8.23",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.5.3"
   },
   "keywords": [
     "effector",

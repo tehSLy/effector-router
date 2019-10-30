@@ -17,7 +17,7 @@ export type Route<S> = {
 	// readonly matcher: Matcher; // should be hidden
 	// readonly normalizedPath: string; // should be hidden
 
-	path( param: string ): string;
+	path( param?: string ): string;
 	path( ...params: string[] ): string;
 	path( params: {} ): string;
 } & { [key in keyof S]: Route<S[key] extends object ? S[key] : void> }
